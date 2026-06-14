@@ -1,0 +1,313 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#005eff;
+    font-size:28px;
+    font-weight:800;
+}
+
+.tagline{
+    color:#777;
+    font-size:12px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#005eff;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+    background:linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url("images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    max-width:800px;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#005eff;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0044c7;
+}
+
+/* ABOUT */
+
+.about{
+    max-width:1100px;
+    margin:80px auto;
+    padding:40px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.about h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#005eff;
+}
+
+.about h3{
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.about p{
+    margin-bottom:15px;
+    text-align:justify;
+}
+
+/* SECTION */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:38px;
+    color:#222;
+}
+
+/* CARD */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#005eff;
+    margin-bottom:15px;
+}
+
+.card h4{
+    margin-top:15px;
+    margin-bottom:8px;
+}
+
+.card p{
+    margin-bottom:10px;
+}
+
+.card ul,
+.card ol{
+    margin-left:20px;
+}
+
+.card li{
+    margin-bottom:5px;
+}
+
+.card a{
+    color:#005eff;
+    text-decoration:none;
+}
+
+.card a:hover{
+    text-decoration:underline;
+}
+
+/* DETAILS */
+
+details{
+    margin-top:15px;
+    padding:10px;
+    background:#f8f9ff;
+    border-radius:10px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#005eff;
+}
+
+/* TEAM */
+
+.team{
+    background:white;
+    padding:80px 20px;
+}
+
+.team h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+.team-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.team-card{
+    background:#f4f7fc;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.team-card h3{
+    color:#005eff;
+    margin-bottom:10px;
+}
+
+.team-card p{
+    color:#666;
+    font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero-content h1{
+        font-size:34px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .section h2,
+    .team h2{
+        font-size:30px;
+    }
+
+    .about{
+        padding:25px;
+        margin:40px 15px;
+    }
+}
